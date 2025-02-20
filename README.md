@@ -1,4 +1,6 @@
 # flux-dev MCP 服务器
+[![smithery badge](https://smithery.ai/badge/@nicekate/flux-dev-mcp)](https://smithery.ai/server/@nicekate/flux-dev-mcp)
+
 
 一个基于端脑云 Flux 模型 API 的 Model Context Protocol (MCP) 服务器实现。
 
@@ -46,6 +48,14 @@ npm run build
 npm run watch
 ```
 
+### 安装 Flux Dev
+#### 使用 Smithery 安装
+
+通过 [Smithery](https://smithery.ai/server/@nicekate/flux-dev-mcp) 自动安装到 Claude Desktop 的 Flux Dev：
+
+```bash
+npx -y @smithery/cli install @nicekate/flux-dev-mcp --client claude
+```
 
 ## Claude Desktop 配置说明
 
