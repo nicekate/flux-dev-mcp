@@ -1,0 +1,21 @@
+# Smithery configuration file: https://smithery.ai/docs/config#smitheryyaml
+
+startCommand:
+  type: stdio
+  configSchema:
+    # JSON Schema defining the configuration options for the MCP.
+    type: object
+    required:
+      - cephalonApiKey
+      - cephalonModelId
+    properties:
+      cephalonApiKey:
+        type: string
+        description: The API key for accessing Cephalon cloud services.
+      cephalonModelId:
+        type: string
+        description: The model ID for the Cephalon service.
+  commandFunction:
+    # A function that produces the CLI command to start the MCP on stdio.
+    |-
+    (config) => ({ command: 'node', args: ['build/index.js'], env: { CEPHALON_API_KEY: config.cephalonApiKey, CEPHALON_MODEL_ID: config.cephalonModelId } })
